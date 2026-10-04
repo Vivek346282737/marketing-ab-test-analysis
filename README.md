@@ -3,6 +3,8 @@
 Did showing product ads convert better than showing a public service announcement?
 An A/B test analysis of **588,101 users** using **Python and SQL**.
 
+**Live dashboard:** https://vivek346282737.github.io/marketing-ab-test-analysis/
+
 ## Experiment
 
 | Group | What users saw | Users |
@@ -58,6 +60,7 @@ An A/B test analysis of **588,101 users** using **Python and SQL**.
 ```powershell
 pip install pandas numpy scipy matplotlib seaborn
 python analysis.py
+python build_dashboard.py
 ```
 
-Results are written to `outputs/` (summary, SQL results and charts).
+Results are written to `outputs/` (summary, SQL results and charts) and the interactive dashboard to `docs/index.html`.
