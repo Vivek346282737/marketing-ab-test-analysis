@@ -1,5 +1,7 @@
 # Marketing A/B Test Analysis
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square) ![SQL](https://img.shields.io/badge/SQL-336791?style=flat-square) ![A/B Testing](https://img.shields.io/badge/A%2FB%20Testing-1F4E79?style=flat-square) ![Statistics](https://img.shields.io/badge/Statistics-1F4E79?style=flat-square)
+
 Did showing product ads convert better than showing a public service announcement?
 An A/B test analysis of **588,101 users** using **Python and SQL**.
 
@@ -64,3 +66,7 @@ python build_dashboard.py
 ```
 
 Results are written to `outputs/` (summary, SQL results and charts) and the interactive dashboard to `docs/index.html`.
+
+## Author
+
+**Vivek Prasad** - [LinkedIn](https://www.linkedin.com/in/prasadvivek123) | [GitHub](https://github.com/Vivek346282737) | [Tableau Public](https://public.tableau.com/app/profile/vivek.prasad5963)
