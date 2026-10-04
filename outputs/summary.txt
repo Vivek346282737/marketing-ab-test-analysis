@@ -1,0 +1,37 @@
+MARKETING A/B TEST - SUMMARY
+============================================================
+Users: 588,101   duplicates: 0   missing values: 0
+Control (PSA)  :   23,524 users   conversion 1.785%
+Treatment (Ad) :  564,577 users   conversion 2.555%
+Traffic split  : 96.0% ad / 4.0% psa (unequal by design)
+
+Absolute lift  : 0.769 percentage points
+Relative lift  : 43.1%
+95% CI (diff)  : 0.595 to 0.943 percentage points
+Two-proportion z-test : z = 7.37, p = 1.71e-13
+Chi-square test       : chi2 = 54.0, p = 2e-13
+Statistical power     : 100.0%
+Sample needed per group for 80% power at this lift: 5,628
+Decision at alpha = 0.05: REJECT the null hypothesis
+
+SQL: conversion_by_group
+test_group  users  conversions  conversion_rate_pct  avg_ads_seen
+        ad 564577        14423                2.555          24.8
+       psa  23524          420                1.785          24.8
+
+SQL: conversion_by_day
+most_ads_day  users  conversion_rate_pct  day_rank
+      Monday  83571                3.324         1
+     Tuesday  74572                3.044         2
+   Wednesday  77418                2.536         3
+      Sunday  82332                2.462         4
+      Friday  88805                2.246         5
+    Thursday  79077                2.164         6
+    Saturday  78802                2.131         7
+
+SQL: conversion_by_ad_exposure
+ads_bucket  users  conversion_rate_pct  share_of_users_pct
+   1. 1-10 249499                0.326                44.2
+  2. 11-50 248875                1.887                44.1
+ 3. 51-100  44149               11.631                 7.8
+   4. 100+  22054               17.135                 3.9
