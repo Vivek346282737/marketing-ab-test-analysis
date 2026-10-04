@@ -112,7 +112,7 @@ def main():
     buckets = pd.cut(ads.total_ads, [0, 10, 50, 100, 10**6], labels=["1-10", "11-50", "51-100", "100+"])
     ci = lambda p, n: [round(100 * (p - 1.96 * np.sqrt(p * (1 - p) / n)), 3), round(100 * (p + 1.96 * np.sqrt(p * (1 - p) / n)), 3)]
     data = {
-        "group": {"labels": ["Control (PSA)", "Treatment (Ad)"], "rates": [round(100 * r["p_c"], 3), round(100 * r["p_t"], 3)],
+        "group": {"labels": ["Control (PSA)", "Treatment (Ad)"], "rates": [round(100 * r["p_c"], 4), round(100 * r["p_t"], 4)],
                   "ci": [ci(r["p_c"], r["n_c"]), ci(r["p_t"], r["n_t"])]},
         "ads": {"labels": list(buckets.cat.categories),
                 "rates": (ads.groupby(buckets, observed=True).converted.mean() * 100).round(3).tolist()},
